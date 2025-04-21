@@ -59,6 +59,11 @@ int main()
 #include &lt;stdlib.h&gt;
 #include "new.h"
 
+typedef struct point
+{
+    int x, y;
+}point;
+
 int main()
 {
     point* points = new(point, 2);
