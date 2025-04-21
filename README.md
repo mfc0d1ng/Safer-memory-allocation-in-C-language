@@ -26,7 +26,7 @@ int main()
 </code>
 </pre>
 
-* Example A:
+* Example B:
 
 <pre>
 <code class="language-c">
@@ -50,6 +50,8 @@ int main()
 }
 </code>
 </pre>
+
+* Example C:
 
 <pre>
 <code class="language-c">
