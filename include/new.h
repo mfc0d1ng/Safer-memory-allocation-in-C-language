@@ -1,5 +1,5 @@
-#ifndef _NEW_H
-#define _NEW_H
+#ifndef NEW_H
+#define NEW_H
 
 /**
  * @brief Allocates memory for an object of type T.
