@@ -1,5 +1,5 @@
 /**
- * A set of macro function for safer memory allocation C.
+ * A set of macro functions for safer memory allocation C.
  * 
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
