@@ -9,7 +9,7 @@ typedef struct point
 
 int main()
 {
-    int* integer = new_object(int);
+    int* integer = new(int);
 
     *integer = 10000; 
 
@@ -18,7 +18,7 @@ int main()
     delete(integer);
 
     
-    const char** strings = new(const char*, 3);
+    const char** strings = new_block(const char*, 3);
 
     strings[0] = "Hello";
     strings[1] = "world";
@@ -29,7 +29,7 @@ int main()
     delete(strings);
     
 
-    point* points = new(point, 2);
+    point* points = new_block(point, 2);
 
     points[0] = (point){1, 1};
     points[1] = (point){2, 2};
