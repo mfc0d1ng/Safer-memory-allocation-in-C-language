@@ -13,7 +13,7 @@ A set of macro functions which provide a safer memory allocation in C.
 
 int main()
 {
-    int* integer = new_object(int);
+    int* integer = new(int);
 
     *integer = 10000;
 
@@ -36,7 +36,7 @@ int main()
 
 int main()
 {
-    const char** strings = new(const char*, 3);
+    const char** strings = new_block(const char*, 3);
 
     strings[0] = "Hello";
     strings[1] = "world";
@@ -66,7 +66,7 @@ typedef struct point
 
 int main()
 {
-    point* points = new(point, 2);
+    point* points = new_block(point, 2);
 
     points[0] = (point){1, 1};
     points[1] = (point){2, 2};
