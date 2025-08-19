@@ -1,5 +1,5 @@
 /**
- * A set of macro functions for safer memory allocation C.
+ * A set of macro functions for providing safer memory allocation in C.
  * 
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -20,7 +20,7 @@
  * 
  * User is responsible for handling the returned pointer.
  */
-#define unsafe_new(T) ({  \
+#define new_unsafe(T) ({  \
     calloc(1, sizeof(T)); \
 })
 
@@ -41,7 +41,7 @@
  * @param ERR Error message.
  * @return A pointer to the allocated memory.
  */
-#define _new(T, ERR) ({                 \
+#define new_(T, ERR) ({                 \
     void* __ptr = calloc(1, sizeof(T)); \
     if(!__ptr) {                        \
         fprintf(stderr, "%s\n", ERR);   \
@@ -58,7 +58,7 @@
  * 
  * User is responsible for handling the returned pointer.
  */
-#define unsafe_new_block(T, N) ({ \
+#define new_block_unsafe(T, N) ({ \
      calloc(N, sizeof(T));        \
 })
 
@@ -81,7 +81,7 @@
  * @param ERR Error message.
  * @return A pointer to the allocated memory.
  */
-#define _new_block(T, N, ERR) ({        \
+#define new_block_(T, N, ERR) ({        \
     void* __ptr = calloc(N, sizeof(T)); \
     if(!__ptr) {                        \
         fprintf(stderr, "%s\n", ERR);   \
