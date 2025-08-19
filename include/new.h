@@ -41,7 +41,7 @@
  * @param ERR Error message.
  * @return A pointer to the allocated memory.
  */
-#define new_(T, ERR) ({                 \
+#define new_object(T, ERR) ({           \
     void* __ptr = calloc(1, sizeof(T)); \
     if(!__ptr) {                        \
         fprintf(stderr, "%s\n", ERR);   \
@@ -81,7 +81,7 @@
  * @param ERR Error message.
  * @return A pointer to the allocated memory.
  */
-#define new_block_(T, N, ERR) ({        \
+#define new_objects_block(T, N, ERR) ({ \
     void* __ptr = calloc(N, sizeof(T)); \
     if(!__ptr) {                        \
         fprintf(stderr, "%s\n", ERR);   \
